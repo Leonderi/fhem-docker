@@ -82,7 +82,7 @@ services:
         ports:
             - "8080:8080"
             - "51286:51286"
-        image: oznu/homebridge:latestnodered/node-red:1.0.3-2
+        image: oznu/homebridge:latest
         environment:
           - TZ=Europe/Berlin
           - PGID=1000
