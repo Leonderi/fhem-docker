@@ -95,6 +95,20 @@ services:
             - fhem-network
         depends_on:
             - "fhem"
+            
+    zigbee2mqtt:
+        restart: always
+        image: koenkk/zigbee2mqtt
+        volumes:
+          - ./zigbee2mqtt/data:/app/data
+        networks:
+            - fhem-network
+        depends_on:
+            - "fhem"
+            - "mqtt"
+        privileged: true
+        environment:
+          - TZ=Europe/Berlin
 
 networks:
     fhem-network:
