@@ -92,8 +92,6 @@ services:
         volumes:
             - ./homebridge/:/homebridge/
         network_mode: host
-        networks:
-            - fhem-network
         depends_on:
             - "fhem"
             
