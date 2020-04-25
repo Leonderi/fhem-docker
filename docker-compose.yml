@@ -82,7 +82,7 @@ services:
         ports:
             - "8080:8080"
             - "51286:51286"
-        image: oznu/homebridge:latest
+        image: ./homebridge/build
         environment:
           - TZ=Europe/Berlin
           - PGID=1000
