@@ -82,7 +82,7 @@ services:
         ports:
             - "8080:8080"
             - "51286:51286"
-        image: './homebridge/build'
+        image: './homebridge/'
         environment:
           - TZ=Europe/Berlin
           - PGID=1000
