@@ -102,6 +102,7 @@ services:
           - ./zigbee2mqtt/data:/app/data
         networks:
             - fhem-network
+        privileged: true
         depends_on:
             - "mqtt"
         environment:
