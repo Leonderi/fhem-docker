@@ -112,7 +112,7 @@ services:
         image: carldebilly/zigbee2mqttassistant
         environment:
             - Z2MA_SETTINGS__MQTTSERVER=mqtt
-            - Z2MA_SETTINGS__BaseTopic="/SmartHome"
+            - Z2MA_SETTINGS__BaseTopic="\/SmartHome"
             - TZ=Europe/Berlin
         networks:
             - fhem-network
