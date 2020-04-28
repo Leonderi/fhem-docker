@@ -110,15 +110,17 @@ services:
     zigbee2mqttAssistant:
         image: carldebilly/zigbee2mqttassistant
         environment:
-          - Z2MA_SETTINGS__MQTTSERVER=172.16.20.5
-          - Z2MA_SETTINGS__BaseTopic="/SmartHome"
-          - TZ=Europe/Berlin
+            - Z2MA_SETTINGS__MQTTSERVER=mqtt
+            - Z2MA_SETTINGS__BaseTopic="/SmartHome"
+            - TZ=Europe/Berlin
         networks:
             - fhem-network
         depends_on:
             - "fhem"
+        expose:
+            - "8880"
         ports:
-          - 8880:80
+            - 8880:80
         restart: unless-stopped
 
     portainer:
