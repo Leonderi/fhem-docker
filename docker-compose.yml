@@ -114,6 +114,7 @@ services:
             - Z2MA_SETTINGS__MQTTSERVER=mqtt
             - Z2MA_SETTINGS__BaseTopic="\/SmartHome"
             - TZ=Europe/Berlin
+            - ASPNETCORE_URLS=http://*:8888
         networks:
             - fhem-network
         depends_on:
@@ -121,7 +122,7 @@ services:
         expose:
             - "8880"
         ports:
-            - 8880:80
+            - 8880:8888
         restart: unless-stopped
 
     portainer:
