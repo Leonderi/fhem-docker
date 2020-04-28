@@ -112,6 +112,7 @@ services:
         image: carldebilly/zigbee2mqttassistant
         environment:
           - Z2MA_SETTINGS__MQTTSERVER=172.16.20.5
+          - Z2MA_SETTINGS__BaseTopic="/SmartHome"
           #- Z2MA_SETTINGS__MQTTUSERNAME={MQTTUSERNAME}
           #- Z2MA_SETTINGS__MQTTPASSWORD={MQTTPASSWORD}
           # Set to your TimeZone when using on Linux https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
